@@ -1,0 +1,66 @@
+.bar-chart-container {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  background-color: #ffffff;
+  padding: 25px 25px 0;
+  margin-bottom: 20px;
+}
+
+.bar-chart-container > h1 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 6px;
+}
+
+.bar-chart-container > select {
+  color: var(--Secondary-Text, #858585);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.bar-chart-container > div {
+  position: relative;
+  top: -35px;
+}
+
+.bar-chart-container > span {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 100px auto;
+}
+
+.bar-chart-loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #3e84f8;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loaderAnimation 1.5s ease-out 0s infinite normal backwards;
+  margin: 100px auto;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,36 @@
+.dash-board-page {
+  background-color: #f8faff;
+  padding: 40px 50px 40px 43px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: calc(100vh - 80px);
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard-container {
+    margin-left: min(10%, 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard-container {
+    margin-left: min(10%, 60px);
+  }
+}
+
+.dashboard-inside-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}

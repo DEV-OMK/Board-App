@@ -1,0 +1,57 @@
+.sign-in-banner-container {
+  background-image: url("https://res.cloudinary.com/ddaimmqrr/image/upload/v1695201005/Board-app/Left_side_emtnvq.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+.sign-in-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-left: min(100px, 15%);
+  position: relative;
+  left: -5%;
+}
+
+@media screen and (max-width: 767px) {
+  .sign-in-banner {
+    display: none;
+  }
+}
+
+.sign-in-banner > header {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 122.687%; /* 29.445px */
+  letter-spacing: 0.36px;
+  align-self: flex-start;
+}
+
+.sign-in-banner-title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.sign-in-banner > footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-banner > footer > img {
+  margin-left: 35px;
+  width: 44px;
+  aspect-ratio: 1;
+}
