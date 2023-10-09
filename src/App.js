@@ -6,18 +6,81 @@ import TransactionsPage from "./components/TransactionsPage";
 import UsersPage from "./components/UsersPage";
 import SettingsPage from "./components/SettingsPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+import Cookies from "js-cookie";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
+  // const handleCallbackResponse = (response) => {
+  //   Cookies.set("Encoded JWT ID Token", response.credential);
+  // };
+
+  // useEffect(() => {
+  //   // Load the Google API client script
+  //   const script = document.createElement("script");
+  //   script.src = "https://apis.google.com/js/platform.js";
+  //   script.onload = () => {
+  //     // Initialize the Google API client
+  //     window.gapi.load("auth2", () => {
+  //       window.gapi.auth2.init({
+  //         client_id:
+  //           "921722741487-21dqi0de3s2ehlsvpf800nqujp8o3bjq.apps.googleusercontent.com",
+  //       });
+  //     });
+  //   };
+  //   document.body.appendChild(script);
+  // }, []);
+
   return (
     <BrowserRouter>
       <div className="main-container">
         <Routes>
-          <Route exact path="/signup" element={<SignInPage />} />
-          <Route exact path="/" element={<DashBoardPage />} />
-          <Route exact path="/schedules" element={<SchedulesPage />} />
-          <Route exact path="/transactions" element={<TransactionsPage />} />
-          <Route exact path="/users" element={<UsersPage />} />
-          <Route exact path="/settings" element={<SettingsPage />} />
+          <Route exact path="/signin" element={<SignInPage />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <ProtectedRoute>
+                <DashBoardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/schedules"
+            element={
+              <ProtectedRoute>
+                <SchedulesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/transactions"
+            element={
+              <ProtectedRoute>
+                <TransactionsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/users"
+            element={
+              <ProtectedRoute>
+                <UsersPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <SettingsPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>
