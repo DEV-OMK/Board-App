@@ -6,8 +6,6 @@ import TransactionsPage from "./components/TransactionsPage";
 import UsersPage from "./components/UsersPage";
 import SettingsPage from "./components/SettingsPage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
-import Cookies from "js-cookie";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {

@@ -26,7 +26,7 @@ const SignInCard = () => {
       theme: "outline",
       size: "medium",
     });
-  }, []);
+  });
 
   return (
     <div className="sign-in">
